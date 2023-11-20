@@ -5,4 +5,4 @@ temp/
 /data/processed/*
 outputs
 venv
-
+kaggle.json
