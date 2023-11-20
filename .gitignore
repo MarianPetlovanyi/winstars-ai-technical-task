@@ -1,7 +1,7 @@
 *.log
 temp/
 data/raw/*
-data/proceed/
+data/processed/*
 outputs
 venv
 

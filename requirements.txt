@@ -1,0 +1,12 @@
+tensorflow[and-cuda]
+numpy
+pandas
+opencv-python
+hydra-core
+opendatasets
+matplotlib
+seaborn
+scikit-learn
+notebook
+ipykernel
+Pillow
