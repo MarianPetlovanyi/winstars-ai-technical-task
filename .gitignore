@@ -1,0 +1,7 @@
+*.log
+temp/
+data/raw/*
+data/proceed/
+outputs
+venv
+
