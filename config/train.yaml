@@ -20,7 +20,7 @@ training:
   loss: "binary_crossentropy"
   metrics: ["accuracy"]
   batch_size: 32
-  epochs: 3
+  epochs: 20
   early_stopping:
     monitor: "val_loss"
     patience: 5

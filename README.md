@@ -55,7 +55,7 @@ python src/download_dataset.py
 ```
 P.S. You can add `kaggle.json` file to root folder `winstars-ai-technical-task/` to enter Your credentials automatically
 
-### Train model
+### Train the model
 Once dataset is downloaded and unzipped, you can train a model by running script:
 ```bash
 python src/train.py
@@ -67,3 +67,19 @@ Example:
 python src/train.py model.input_size=[128,128,3]
 ```
 You can check config file variables in `config/train.yaml`
+
+
+### Demo
+Recommended to ber runned from root directory. 
+```bash
+python inference.py
+```
+Result:
+![Alt text](example_photos/default.png "Default example")
+
+You can specify image path. Example:
+```bash
+python inference.py data.image_path=data/raw/airbus-ship-detection/test_v2/0b8cde107.jpg
+```
+Result:
+![Alt text](example_photos/example1.png "First example")
