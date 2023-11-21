@@ -6,3 +6,4 @@ temp/
 outputs
 venv
 kaggle.json
+__pycache__
