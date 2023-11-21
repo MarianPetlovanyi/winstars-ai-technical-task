@@ -1,0 +1,7 @@
+dataset:
+  url: "https://www.kaggle.com/c/airbus-ship-detection/data"
+  download_path: "data/raw/"
+
+hydra:
+  job:
+    chdir: false

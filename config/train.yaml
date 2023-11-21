@@ -1,0 +1,30 @@
+# config/train.yaml
+
+hydra:
+  job:
+    chdir: false 
+
+data:
+  csv_path: "data/raw/airbus-ship-detection/train_ship_segmentations_v2.csv"
+  images_dir: "data/raw/airbus-ship-detection/train_v2"
+  sample_size: 1000  # Number of samples to use from the CSV file
+  test_size: 0.2     # Test set size
+
+model:
+  input_size: [224, 224, 3]
+  n_filters: 8
+  n_classes: 1
+
+training:
+  optimizer: "Adam"
+  loss: "binary_crossentropy"
+  metrics: ["accuracy"]
+  batch_size: 32
+  epochs: 3
+  early_stopping:
+    monitor: "val_loss"
+    patience: 5
+    restore_best_weights: true
+
+output:
+  model_path: "models/model1.h5"
