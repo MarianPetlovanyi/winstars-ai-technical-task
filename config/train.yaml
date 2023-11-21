@@ -12,7 +12,7 @@ data:
 
 model:
   input_size: [224, 224, 3]
-  n_filters: 8
+  n_filters: 16
   n_classes: 1
 
 training:

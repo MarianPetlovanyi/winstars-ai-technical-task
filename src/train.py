@@ -26,7 +26,7 @@ def train(cfg: DictConfig) -> None:
     for filename in df["ImageId"]:
         mask = load_binary_mask(df, filename)
         img = cv2.imread(os.path.join(images_dir, filename))
-        img_resized, mask_resized = resize_image_and_mask(img, mask)
+        img_resized, mask_resized = resize_image_and_mask(img, mask, target_size=cfg.model.input_size[:2])
         X.append(img_resized)
         y.append(mask_resized)
 
