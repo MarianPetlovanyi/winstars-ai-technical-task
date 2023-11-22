@@ -3,6 +3,9 @@ Technical task received from Winstar.ai
 
 This project focuses on semantic segmentation using computer vision techniques.
 
+## ⚠️Disclaimer⚠️
+This repo provides little default model.
+Model was trained on my GPU with only 2Gb of VRAM and 8gb of RAM. There were no opportunity to train it on Google Colab because of dataset size(~31Gb)
 ## Environment Setup
 
 ### Prerequisites
