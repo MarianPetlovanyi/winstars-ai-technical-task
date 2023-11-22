@@ -1,7 +1,5 @@
 import tensorflow as tf
-import pandas as pd
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 from omegaconf import DictConfig
 import hydra
@@ -11,7 +9,6 @@ def inference(cfg: DictConfig):
     loaded_model = tf.keras.models.load_model(cfg.model.model_path)
     input_layer = loaded_model.layers[0]  # Assuming the input layer is the first layer, adjust if needed
     input_shape = input_layer.input_shape
-    df = pd.read_csv(cfg.data.csv_path)
     path = cfg.data.image_path
 
     image = cv2.imread(path)
