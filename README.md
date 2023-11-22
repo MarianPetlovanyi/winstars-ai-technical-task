@@ -48,6 +48,10 @@ Once the virtual environment is activated, install the required dependencies usi
 ```bash
 pip install -r requirements.txt
 ```
+Alternatively if you want just to run model without training you can install minimal requirements by running the following command:
+```bash
+pip install -r requirements_minimal.txt 
+``` 
 
 ## Usage
 
