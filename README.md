@@ -1,5 +1,5 @@
 # winstars-ai-technical-task
-Technical task received from Winstar.ai
+Technical task received from Winstars.ai
 
 This project focuses on semantic segmentation using computer vision techniques.
 
@@ -73,7 +73,7 @@ You can check config file variables in `config/train.yaml`
 
 
 ### Demo
-Recommended to ber runned from root directory. 
+Recommended to be runned from root directory and read disclaimer above. 
 ```bash
 python inference.py
 ```
