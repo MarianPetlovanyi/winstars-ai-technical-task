@@ -1,0 +1,13 @@
+hydra:
+  job:
+    chdir: false 
+
+model:
+  model_path: "models/model1.h5"
+
+inference:
+  threshold: 0.6
+
+data:
+  csv_path: "data/raw/airbus-ship-detection/train_ship_segmentations_v2.csv"
+  image_path: "demo.jpg"

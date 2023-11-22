@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-
+import tensorflow as tf
 
 def rle_decode(mask_rle, shape=(768, 768)):
     '''
@@ -38,3 +38,9 @@ def resize_image_and_mask(img, mask, target_size=(224,224)):
     mask_resized = cv2.resize(mask, target_size, interpolation=cv2.INTER_NEAREST)
 
     return img_resized, mask_resized
+
+def process_predicted(y_pred, threshold = 0.3):
+    y_pred = (y_pred - tf.math.reduce_min(y_pred))/(tf.math.reduce_max(y_pred)-tf.math.reduce_min(y_pred))
+    binary_y_pred = tf.where(y_pred > threshold, 1, 0)
+    print(binary_y_pred)
+    return binary_y_pred

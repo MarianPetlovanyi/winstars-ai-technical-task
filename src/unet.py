@@ -12,13 +12,11 @@ def EncoderMiniBlock(inputs, n_filters=32, dropout_prob=0.3, max_pooling=True):
     conv = Conv2D(n_filters, 
                   3,  
                   activation='relu',
-                  padding='same',
-                  kernel_initializer='HeNormal')(inputs)
+                  padding='same')(inputs)
     conv = Conv2D(n_filters, 
                   3,
                   activation='relu',
-                  padding='same',
-                  kernel_initializer='HeNormal')(conv)
+                  padding='same')(conv)
     
     conv = BatchNormalization()(conv, training=False)
 
@@ -45,13 +43,11 @@ def DecoderMiniBlock(prev_layer_input, skip_layer_input, n_filters=32):
     conv = Conv2D(n_filters, 
                  3,     # Kernel size
                  activation='relu',
-                 padding='same',
-                 kernel_initializer='HeNormal')(merge)
+                 padding='same')(merge)
     conv = Conv2D(n_filters,
                  3,   # Kernel size
                  activation='relu',
-                 padding='same',
-                 kernel_initializer='HeNormal')(conv)
+                 padding='same')(conv)
     return conv
 
 def UNetCompiled(input_size=(224, 224, 3), n_filters=32, n_classes=3):
@@ -72,8 +68,7 @@ def UNetCompiled(input_size=(224, 224, 3), n_filters=32, n_classes=3):
     conv9 = Conv2D(n_filters,
                  3,
                  activation='relu',
-                 padding='same',
-                 kernel_initializer='he_normal')(ublock9)
+                 padding='same')(ublock9)
 
     conv10 = Conv2D(n_classes, 1, padding='same')(conv9)
     
